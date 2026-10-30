@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nirvana Tech Labs</title>
+    <style>
+        *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+section{
+    padding:50px 20px;
+    scroll-margin-top:100px;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    padding-top:90px;   /* header height jetlu */
+}
+
+/* Header */
+header{
+    background:#ffffff;
+    padding:10px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+}
+
+
+.logo h2{
+    font-size:24px;
+    font-weight:700;
+    color:#1e293b;
+    letter-spacing:1px;
+}
+
+.logo span{
+    color:#6366f1;   /* highlight color */
+}
+
+nav{
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    color:#1e293b;
+    text-decoration:none;
+    font-size:18px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#6366f1;
+}
+
+/* Sections */
+section{ padding:50px 20px; }
+#about{ background:#f1f5f9; }
+#contact{ background:#f8fafc; }
+footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+
+/* =============== Home ===============*/
+#home{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:100px 80px;
+    background:linear-gradient(to right,#6366f1,#8b5cf6);
+    color:white;
+}
+
+.home-content{
+    width:50%;
+}
+
+.home-content h2{
+    font-size:52px;
+    margin-bottom:20px;
+}
+
+.home-content span{
+    color:#fde047;
+}
+
+.home-content p{
+    font-size:18px;
+    margin-bottom:30px;
+    color:#e0e7ff;
+}
+
+.home-btn{
+    padding:12px 30px;
+    background:white;
+    color:#6366f1;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.home-btn:hover{
+    background:#fde047;
+    color:black;
+}
+
+.home-image img{
+    width:520px;
+    border-radius:15px;
+}
+
+/* ============== About =============== */
+#about{
+    padding:80px 60px;
+}
+
+.about-title{
+    text-align:center;
+    font-size:36px;
+    margin-bottom:60px;
+    color:#6366f1;
+}
+
+.about-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:50px;
+    margin-bottom:60px;
+}
+
+.about-row.reverse{
+    flex-direction:row-reverse;
+}
+
+.about-row img{
+    width:400px;
+    border-radius:10px;
+}
+
+.about-content h3{
+    color:#6366f1;
+}
+
+.about-content p{
+    color:#475569;
+}
+
+/* ================== SERVICES SECTION – STRUCTURE SAME =========== */
+#services{
+    padding:50px 60px;
+    background:linear-gradient(to right,#6366f1,#8b5cf6);
+    color:white;
+}
+
+.services-title{
+    text-align:center;
+    font-size:38px;
+    margin-bottom:15px;
+}
+
+.services-subtitle{
+    text-align:center;
+    margin-bottom:60px;
+    color:#e0f2fe;
+}
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:40px;
+}
+
+.service-box{
+    background:white;
+    color:#333;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.service-box img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-bottom:20px;
+}
+
+.service-box h3{
+    color:#6366f1;
+}
+
+.service-box:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* ================== Contact ==================== */
+#contact{
+    padding:80px 60px;
+    text-align:center;
+}
+
+.contact-title{
+    font-size:36px;
+    margin-bottom:10px;
+    color:#6366f1;
+}
+
+.contact-subtitle{
+    color:#64748b;
+    margin-bottom:50px;
+}
+
+.contact-container{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+
+.contact-box{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.05);
+    transition:0.3s;
+}
+
+.contact-box h3{
+    color:#6366f1;
+}
+
+.contact-box:hover{
+    transform:translateY(-8px);
+}
+
+    </style>
+
+</head>
+<body>
+    <header>
+
+        <!-- Left Side Logo -->
+        <div class="logo">
+    <h2>Nirvana<span> Tech Labs</span></h2>
+</div>
+
+
+        <!-- Right Side Menu -->
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
+
+    <section id="home">
+
+        <!-- Left Content -->
+        <div class="home-content">
+            <h2>Digitalize Your Ideas With <span>Nirvana Tech Labs</span></h2>
+            <p>
+                We transform innovative ideas into powerful digital solutions.
+                Build your business with modern technology and scalable IT services.
+            </p>
+            <a href="#" class="home-btn">Get Started</a>
+        </div>
+
+        <!-- Right Image -->
+        <div class="home-image">
+            <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=900&q=80" alt="IT Company">
+        </div>
+
+    </section>
+
+
+    <section id="about">
+
+        <h2 class="about-title">About Our Company</h2>
+
+        <div class="about-row">
+         <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80" alt="IT Team">
+
+         <div class="about-content">
+            <h3>Who We Are</h3>
+            <p>
+                Nirvana Tech Labs is a fast-growing and innovation-driven IT company committed to 
+                delivering high-quality digital solutions for businesses of all sizes. 
+                We combine creativity, technical expertise, and modern technologies to build 
+                secure, scalable, and user-friendly applications. Our team of experienced 
+                developers and designers works closely with clients to understand their goals 
+                and transform ideas into powerful digital products that create real business impact.
+            </p>
+        </div>
+    </div>
+
+    <div class="about-row reverse">
+     <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80" alt="Business Meeting">
+
+     <div class="about-content">
+        <h3>Our Mission</h3>
+        <p>
+            Our mission is to empower startups and enterprises by digitalizing their 
+            business processes through advanced technology solutions. We aim to provide 
+            cost-effective, reliable, and performance-oriented IT services that help 
+            companies stay competitive in the modern digital world. We believe in 
+            innovation, transparency, and long-term partnerships that drive sustainable growth.
+        </p>
+    </div>
+</div>
+
+<div class="about-row">
+    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80" alt="Developer Coding">
+
+    <div class="about-content">
+        <h3>Our Expertise</h3>
+        <p>
+            We specialize in web development, mobile application development, UI/UX design, 
+            cloud-based solutions, and custom software development. Our expertise includes 
+            modern frameworks, responsive designs, secure backend systems, and seamless 
+            user experiences. From concept to deployment, we ensure every project meets 
+            the highest quality standards and exceeds client expectations.
+        </p>
+    </div>
+</div>
+
+</section>
+
+
+
+<section id="services">
+
+    <h2 class="services-title">Our Services</h2>
+    <p class="services-subtitle">
+        Delivering innovative and reliable technology solutions for modern businesses.
+    </p>
+
+    <div class="services-grid">
+
+        <div class="service-box">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="">
+            <h3>Web Development</h3>
+            <p>
+                Custom responsive websites and web applications built with
+                modern technologies to boost your online presence.
+            </p>
+        </div>
+
+        <div class="service-box">
+            <img src="https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?auto=format&fit=crop&w=900&q=80" alt="App Development">
+            <h3>App Development</h3>
+            <p>
+                High-performance Android and iOS applications designed for
+                scalability and seamless user experience.
+            </p>
+        </div>
+
+        <div class="service-box">
+            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80" alt="Gaming Setup">
+
+            <h3>Game Development</h3>
+            <p>
+                We design and develop high-quality 2D and 3D games for mobile, PC, 
+                and web platforms. Our team creates immersive gameplay experiences 
+                with stunning graphics, smooth performance, and engaging user interaction.
+            </p>
+        </div>
+
+
+        <div class="service-box">
+            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692" alt="">
+            <h3>UI / UX Design</h3>
+            <p>
+                Creative and user-centered designs that enhance engagement
+                and maximize customer satisfaction.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section id="contact">
+
+    <h2 class="contact-title">Contact Us</h2>
+    <p class="contact-subtitle">
+        We would love to hear from you. Reach out to us for business inquiries
+        and IT solutions.
+    </p>
+
+    <div class="contact-container">
+
+        <div class="contact-box">
+            <h3>📍 Address</h3>
+            <p> Bilimora, Gujarat 396321</p>
+        </div>
+
+        <div class="contact-box">
+            <h3>📧 Email</h3>
+            <p>nirvanatechlabs@gmail.com</p>
+        </div>
+
+        <div class="contact-box">
+            <h3>📞 Phone</h3>
+            <p>+91 9722278859</p>
+        </div>
+
+        <div class="contact-box">
+            <h3>🌐 Website</h3>
+            <p>www.nirvanaTechLabs.com</p>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    © 2026 Nirvana Tech Labs | All Rights Reserved
+</footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
